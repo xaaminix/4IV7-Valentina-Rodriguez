@@ -1,5 +1,21 @@
 *{
-    background-color: rgb(201, 176, 224);
-    font-family: Arial, Helvetica, sans-serif;
-    color: black;
+    background-image: url(./Imagenes/fondo2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: rgb(143, 19, 220);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    justify-content: center;
+}   
+
+.contenedor{
+    
+    display: flex;
+    font-size: medium;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
 }
+
