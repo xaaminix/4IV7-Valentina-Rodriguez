@@ -1,0 +1,10 @@
+*{
+    background-image: url(../imagen1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: rgb(143, 19, 220);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    justify-content: center;
+}   
