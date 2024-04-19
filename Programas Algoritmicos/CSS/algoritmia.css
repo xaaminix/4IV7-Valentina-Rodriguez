@@ -1,10 +1,163 @@
-*{
-    background-image: url(../imagen1.jpg);
+:root {
+    --colorTextos: #00000067;
+}
+
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../imagen2.png);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    color: rgb(143, 19, 220);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    justify-content: center;
-}   
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    color: #000000;
+}
+h2{
+    text-align: center;
+    font-weight: 700;
+    color: #000000;
+}
+h3 {
+    text-align: center;
+    font-weight: 700;
+    color:#000000;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.problema-container {
+
+    padding: 10px;
+    width: 30%;
+    background: #d9a7c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, rgb(236, 217, 236), #cfa0be);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top,  rgb(236, 217, 236), #cfa0be); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+
+    border-radius: 15px;
+}
+
+.problema-title {
+    margin-bottom: 5px;
+}
+
+.problema-content {
+    color: #147575;
+    margin-top: 10px;
+}
+
+.problema-input {
+    background: none;
+    color: #147575;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid var(--colorTextos);
+
+}
+
+.problema-input:focus {
+    outline: none;
+    color: #5e5d5d;
+}
+
+label {
+    color: var(--colorTextos);
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    top: 10px;
+    transition: 0.5s ease all;
+    pointer-events: none;
+}
+
+.problema-input:focus~label,
+.problema-input:valid~label {
+    top: -14px;
+    font-size: 12px;
+    color: #2196f3;
+
+}
+
+.barra {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.barra::before {
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, #f829ff, #20e3b2, #0cebeb);
+    transition: 0.3s ease width;
+    left: 0;
+}
+
+.problema-input:focus~.barra::before { 
+    width: 100%;
+}
+
+::placeholder {
+    color: #147575;
+}
+
+
+.problema-button {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #d9a7c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, rgb(143, 141, 143), #8d898c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, rgb(143, 141, 143), #8d898c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: none;
+    display: block;
+    padding: 0 10px;
+    width: 40%;
+    margin: 10px auto;
+    color: #ffffff;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    
+    border-radius: 15px;
+}
+
+.problema-button:hover {
+    background: #d9a7c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, rgb(143, 141, 143), #8d898c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, rgb(143, 141, 143), #8d898c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.problema-output {
+    white-space: pre-wrap;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #147575;
+}
+
+@media screen and (max-width:500px) {
+    .container {
+        width: 80%;
+    }
+    .problema-container {
+        width: 80%;
+    }
+}
